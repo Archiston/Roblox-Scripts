@@ -4,7 +4,6 @@ local main = Instance.new("Frame")
 local KnifeSimulatorGUI = Instance.new("TextLabel")
 local aimbot = Instance.new("TextButton")
 local esp = Instance.new("TextButton")
-local speed = Instance.new("TextButton")
 local MadeByArchiston = Instance.new("TextLabel")
 
 --Properties:
@@ -34,13 +33,15 @@ KnifeSimulatorGUI.TextWrapped = true
 aimbot.Name = "aimbot"
 aimbot.Parent = main
 aimbot.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
-aimbot.Position = UDim2.new(0.0298507456, 0, 0.278260857, 0)
-aimbot.Size = UDim2.new(0, 140, 0, 50)
+aimbot.Position = UDim2.new(0.0298507418, 0, 0.278260857, 0)
+aimbot.Size = UDim2.new(0, 160, 0, 60)
 aimbot.Font = Enum.Font.SourceSans
 aimbot.Text = "Aimbot"
 aimbot.TextColor3 = Color3.fromRGB(0, 0, 0)
+aimbot.TextScaled = true
 aimbot.TextSize = 25.000
-aimbot.MouseButton1Down:connect(function()
+aimbot.TextWrapped = true
+esp.MouseButton1Down:connect(function()
 	-- Farewell Infortality.
 	-- Version: 2.82
 	-- Instances:
@@ -66,7 +67,7 @@ aimbot.MouseButton1Down:connect(function()
 	makhacks.Position = UDim2.new(0.126388192, 0, 0.056356363, 0)
 	makhacks.Size = UDim2.new(0, 99, 0, 36)
 	makhacks.Font = Enum.Font.SourceSans
-	makhacks.Text = "ARCHISTON'S"
+	makhacks.Text = "MakHACKs"
 	makhacks.TextColor3 = Color3.new(1, 0, 0)
 	makhacks.TextScaled = true
 	makhacks.TextSize = 14
@@ -119,34 +120,59 @@ end)
 esp.Name = "esp"
 esp.Parent = main
 esp.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
-esp.Position = UDim2.new(0.613607049, 0, 0.278260887, 0)
-esp.Size = UDim2.new(0, 140, 0, 50)
+esp.Position = UDim2.new(0.562845588, 0, 0.278260857, 0)
+esp.Size = UDim2.new(0, 160, 0, 60)
 esp.Font = Enum.Font.SourceSans
+esp.Text = "Esp"
 esp.TextColor3 = Color3.fromRGB(0, 0, 0)
+esp.TextScaled = true
 esp.TextSize = 25.000
+esp.TextWrapped = true
 esp.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/cheatx/main/cheatx%20loader'))()
-end)
 
-speed.Name = "speed"
-speed.Parent = main
-speed.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
-speed.Position = UDim2.new(0.615243614, 0, 0.747826099, 0)
-speed.Size = UDim2.new(0, 141, 0, 50)
-speed.Font = Enum.Font.SourceSans
-speed.Text = "Speed Hack"
-speed.TextColor3 = Color3.fromRGB(0, 0, 0)
-speed.TextSize = 25.000
-speed.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-end)
+	--- Tut
 
+	local esp_settings = { ---- table for esp settings 
+		textsize = 8,
+		colour = 255,255,255
+	}
+
+	local gui = Instance.new("BillboardGui")
+	local esp = Instance.new("TextLabel",gui) ---- new instances to make the billboard gui and the textlabel
+
+
+
+	gui.Name = "Cracked esp"; ---- properties of the esp
+	gui.ResetOnSpawn = false
+	gui.AlwaysOnTop = true;
+	gui.LightInfluence = 0;
+	gui.Size = UDim2.new(1.75, 0, 1.75, 0);
+	esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	esp.Text = ""
+	esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
+	esp.BorderSizePixel = 4;
+	esp.BorderColor3 = Color3.new(esp_settings.colour)
+	esp.BorderSizePixel = 0
+	esp.Font = "GothamSemibold"
+	esp.TextSize = esp_settings.textsize
+	esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
+
+	game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
+		for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+			if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then -- craeting checks for team check, local player etc
+				esp.Text = "{"..v.Name.."}"
+				gui:Clone().Parent = v.Character.Head
+			end
+		end
+	end)
+end)
+	
 MadeByArchiston.Name = "Made By Archiston"
 MadeByArchiston.Parent = main
 MadeByArchiston.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MadeByArchiston.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MadeByArchiston.Position = UDim2.new(0, 0, 0.569565237, 0)
-MadeByArchiston.Size = UDim2.new(0, 221, 0, 84)
+MadeByArchiston.Position = UDim2.new(0.0152284261, 0, 0.573913038, 0)
+MadeByArchiston.Size = UDim2.new(0, 381, 0, 84)
 MadeByArchiston.Font = Enum.Font.SourceSans
 MadeByArchiston.Text = "Made By Archiston"
 MadeByArchiston.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -156,7 +182,7 @@ MadeByArchiston.TextWrapped = true
 
 -- Scripts:
 
-local function DLJZQMQ_fake_script() -- KnifeSimulatorGUI.Script 
+local function UBFJWS_fake_script() -- KnifeSimulatorGUI.Script 
 	local script = Instance.new('Script', KnifeSimulatorGUI)
 
 	local text = script.Parent
@@ -212,8 +238,8 @@ local function DLJZQMQ_fake_script() -- KnifeSimulatorGUI.Script
 		end
 	end
 end
-coroutine.wrap(DLJZQMQ_fake_script)()
-local function PLHFZO_fake_script() -- MadeByArchiston.Script 
+coroutine.wrap(UBFJWS_fake_script)()
+local function BDHVI_fake_script() -- MadeByArchiston.Script 
 	local script = Instance.new('Script', MadeByArchiston)
 
 	local text = script.Parent
@@ -269,4 +295,4 @@ local function PLHFZO_fake_script() -- MadeByArchiston.Script
 		end
 	end
 end
-coroutine.wrap(PLHFZO_fake_script)()
+coroutine.wrap(BDHVI_fake_script)()
