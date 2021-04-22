@@ -1,7 +1,5 @@
 -- Made By Archiston
 local Tutorial = Instance.new("ScreenGui")
-local OpenFrame = Instance.new("Frame")
-local Open = Instance.new("TextButton")
 local Main = Instance.new("Frame")
 local BeautyA = Instance.new("Frame")
 local Name = Instance.new("TextLabel")
@@ -13,34 +11,11 @@ local mm2 = Instance.new("TextButton")
 local arsenal = Instance.new("TextButton")
 local vehiclelegends = Instance.new("TextButton")
 local bgs = Instance.new("TextButton")
-local close = Instance.new("TextButton")
 
 --Properties:
 
 Tutorial.Name = "Tutorial"
 Tutorial.Parent = game.CoreGui
-
-OpenFrame.Name = "OpenFrame"
-OpenFrame.Parent = Tutorial
-OpenFrame.Active = true
-OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
-OpenFrame.BorderSizePixel = 0
-OpenFrame.Position = UDim2.new(0, 0, 0.440239042, 0)
-OpenFrame.Size = UDim2.new(0, 102, 0, 43)
-
-Open.Name = "Open"
-Open.Parent = OpenFrame
-Open.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
-Open.BorderSizePixel = 0
-Open.Size = UDim2.new(0, 102, 0, 43)
-Open.Font = Enum.Font.Cartoon
-Open.Text = "Open"
-Open.TextColor3 = Color3.fromRGB(255, 255, 255)
-Open.TextSize = 35.000
-Open.MouseButton1Down:connect(function()
-	Main.Visible = true
-	OpenFrame.Visible = false
-end)
 
 Main.Name = "Main"
 Main.Parent = Tutorial
@@ -50,8 +25,6 @@ Main.BackgroundTransparency = 0.200
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.368153214, 0, 0.121513948, 0)
 Main.Size = UDim2.new(0, 570, 0, 345)
-Main.Visible = false
-Main.Draggable = true
 
 BeautyA.Name = "BeautyA"
 BeautyA.Parent = Main
@@ -189,25 +162,9 @@ bgs.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("http://roguefamily.com/script/streleziaBGSbeta/script"),true))()
 end)
 
-close.Name = "close"
-close.Parent = Main
-close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-close.Position = UDim2.new(0.947368443, 0, 0.00289855083, 0)
-close.Size = UDim2.new(0, 30, 0, 30)
-close.Font = Enum.Font.GothamBold
-close.Text = "X"
-close.TextColor3 = Color3.fromRGB(0, 0, 0)
-close.TextScaled = true
-close.TextSize = 14.000
-close.TextWrapped = true
-close.MouseButton1Down:connect(function()
-	OpenFrame.Visible = true
-	Main.Visible = false
-end)
-
 -- Scripts:
 
-local function FIPHEO_fake_script() -- Name.Script 
+local function CPKQOB_fake_script() -- Name.Script 
 	local script = Instance.new('Script', Name)
 
 	local text = script.Parent
@@ -263,8 +220,8 @@ local function FIPHEO_fake_script() -- Name.Script
 		end
 	end
 end
-coroutine.wrap(FIPHEO_fake_script)()
-local function DLWTNS_fake_script() -- Credit.Script 
+coroutine.wrap(CPKQOB_fake_script)()
+local function UYXUGJ_fake_script() -- Credit.Script 
 	local script = Instance.new('Script', Credit)
 
 	local text = script.Parent
@@ -320,4 +277,4 @@ local function DLWTNS_fake_script() -- Credit.Script
 		end
 	end
 end
-coroutine.wrap(DLWTNS_fake_script)()
+coroutine.wrap(UYXUGJ_fake_script)()
