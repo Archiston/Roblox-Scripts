@@ -1,5 +1,5 @@
 -- Made By Archiston
-local Tutorial = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local BeautyA = Instance.new("Frame")
 local Name = Instance.new("TextLabel")
@@ -14,11 +14,10 @@ local bgs = Instance.new("TextButton")
 
 --Properties:
 
-Tutorial.Name = "Tutorial"
-Tutorial.Parent = game.CoreGui
+ScreenGui.Parent = game.CoreGui
 
 Main.Name = "Main"
-Main.Parent = Tutorial
+Main.Parent = ScreenGui
 Main.Active = true
 Main.BackgroundColor3 = Color3.fromRGB(170, 0, 127)
 Main.BackgroundTransparency = 0.200
@@ -164,7 +163,7 @@ end)
 
 -- Scripts:
 
-local function CPKQOB_fake_script() -- Name.Script 
+local function IKPZ_fake_script() -- Name.Script 
 	local script = Instance.new('Script', Name)
 
 	local text = script.Parent
@@ -220,8 +219,8 @@ local function CPKQOB_fake_script() -- Name.Script
 		end
 	end
 end
-coroutine.wrap(CPKQOB_fake_script)()
-local function UYXUGJ_fake_script() -- Credit.Script 
+coroutine.wrap(IKPZ_fake_script)()
+local function CWZOJAG_fake_script() -- Credit.Script 
 	local script = Instance.new('Script', Credit)
 
 	local text = script.Parent
@@ -277,4 +276,4 @@ local function UYXUGJ_fake_script() -- Credit.Script
 		end
 	end
 end
-coroutine.wrap(UYXUGJ_fake_script)()
+coroutine.wrap(CWZOJAG_fake_script)()
