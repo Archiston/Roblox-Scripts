@@ -1,0 +1,270 @@
+-- Made By Archiston
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local KnifeSimulatorGUI = Instance.new("TextLabel")
+local aimbot = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
+local speed = Instance.new("TextButton")
+local MadeByArchiston = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0, 0, 0.541832685, 0)
+main.Size = UDim2.new(0, 394, 0, 230)
+
+KnifeSimulatorGUI.Name = "Knife Simulator GUI"
+KnifeSimulatorGUI.Parent = main
+KnifeSimulatorGUI.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+KnifeSimulatorGUI.Size = UDim2.new(0, 394, 0, 50)
+KnifeSimulatorGUI.Font = Enum.Font.SourceSans
+KnifeSimulatorGUI.Text = "KNIFE SIMULATOR GUI"
+KnifeSimulatorGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+KnifeSimulatorGUI.TextScaled = true
+KnifeSimulatorGUI.TextSize = 14.000
+KnifeSimulatorGUI.TextWrapped = true
+
+aimbot.Name = "aimbot"
+aimbot.Parent = main
+aimbot.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+aimbot.Position = UDim2.new(0.0298507456, 0, 0.278260857, 0)
+aimbot.Size = UDim2.new(0, 140, 0, 50)
+aimbot.Font = Enum.Font.SourceSans
+aimbot.Text = "Aimbot"
+aimbot.TextColor3 = Color3.fromRGB(0, 0, 0)
+aimbot.TextSize = 25.000
+aimbot.MouseButton1Down:connect(function()
+	-- Farewell Infortality.
+	-- Version: 2.82
+	-- Instances:
+	local ScreenGui = Instance.new("ScreenGui")
+	local main = Instance.new("Frame")
+	local makhacks = Instance.new("TextLabel")
+	local buttonhack = Instance.new("TextButton")
+	--Properties:
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	main.Name = "main"
+	main.Parent = ScreenGui
+	main.BackgroundColor3 = Color3.new(1, 1, 1)
+	main.Position = UDim2.new(-1.13248825e-05, 0, 0.692621291, 0)
+	main.Size = UDim2.new(0, 148, 0, 123)
+	main.Style = Enum.FrameStyle.DropShadow
+
+	makhacks.Name = "makhacks"
+	makhacks.Parent = main
+	makhacks.BackgroundColor3 = Color3.new(0, 0, 0)
+	makhacks.BackgroundTransparency = 5
+	makhacks.Position = UDim2.new(0.126388192, 0, 0.056356363, 0)
+	makhacks.Size = UDim2.new(0, 99, 0, 36)
+	makhacks.Font = Enum.Font.SourceSans
+	makhacks.Text = "ARCHISTON'S"
+	makhacks.TextColor3 = Color3.new(1, 0, 0)
+	makhacks.TextScaled = true
+	makhacks.TextSize = 14
+	makhacks.TextWrapped = true
+
+	buttonhack.Name = "button hack"
+	buttonhack.Parent = main
+	buttonhack.BackgroundColor3 = Color3.new(0, 0.658824, 0.658824)
+	buttonhack.BackgroundTransparency = 0.5
+	buttonhack.Position = UDim2.new(0.0685841292, 0, 0.452131331, 0)
+	buttonhack.Size = UDim2.new(0, 115, 0, 45)
+	buttonhack.Font = Enum.Font.SourceSans
+	buttonhack.Text = "Aimbot"
+	buttonhack.TextColor3 = Color3.new(0.976471, 1, 0.686275)
+	buttonhack.TextScaled = true
+	buttonhack.TextSize = 14
+	buttonhack.TextWrapped = true
+	buttonhack.MouseButton1Down:connect(function()
+		local plrs = game:service("Players")
+		local ms = plrs.LocalPlayer:GetMouse()
+		local nearest = function()
+			local plr,dist = nil,5000
+			for k,l in pairs(plrs:GetPlayers()) do
+				local pos = l.Character:GetPrimaryPartCFrame().p
+				local len = (ms.Hit.p - pos).Magnitude
+				if len <= dist then
+					plr = l
+					dist = len
+				end
+			end
+			return plr.Character:GetPrimaryPartCFrame().p
+		end
+		workspace.CurrentCamera.trash.ChildAdded:connect(function(c)
+			c.CFrame = CFrame.new(nearest())
+		end)
+	end)
+
+	function SCRIPT_DLQI88_FAKESCRIPT() -- makhacks.Script 
+		local script = Instance.new('Script')
+		script.Parent = makhacks
+		while wait(0.2)do
+			script.Parent.TextColor3 = Color3.fromHSV(math.random(100)/100,1,1)
+
+		end
+
+	end
+	coroutine.resume(coroutine.create(SCRIPT_DLQI88_FAKESCRIPT))
+end)
+
+esp.Name = "esp"
+esp.Parent = main
+esp.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+esp.Position = UDim2.new(0.613607049, 0, 0.278260887, 0)
+esp.Size = UDim2.new(0, 140, 0, 50)
+esp.Font = Enum.Font.SourceSans
+esp.TextColor3 = Color3.fromRGB(0, 0, 0)
+esp.TextSize = 25.000
+esp.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/cheatx/main/cheatx%20loader'))()
+end)
+
+speed.Name = "speed"
+speed.Parent = main
+speed.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+speed.Position = UDim2.new(0.615243614, 0, 0.747826099, 0)
+speed.Size = UDim2.new(0, 141, 0, 50)
+speed.Font = Enum.Font.SourceSans
+speed.Text = "Speed Hack"
+speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+speed.TextSize = 25.000
+speed.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end)
+
+MadeByArchiston.Name = "Made By Archiston"
+MadeByArchiston.Parent = main
+MadeByArchiston.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MadeByArchiston.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MadeByArchiston.Position = UDim2.new(0, 0, 0.569565237, 0)
+MadeByArchiston.Size = UDim2.new(0, 221, 0, 84)
+MadeByArchiston.Font = Enum.Font.SourceSans
+MadeByArchiston.Text = "Made By Archiston"
+MadeByArchiston.TextColor3 = Color3.fromRGB(255, 255, 255)
+MadeByArchiston.TextScaled = true
+MadeByArchiston.TextSize = 25.000
+MadeByArchiston.TextWrapped = true
+
+-- Scripts:
+
+local function DLJZQMQ_fake_script() -- KnifeSimulatorGUI.Script 
+	local script = Instance.new('Script', KnifeSimulatorGUI)
+
+	local text = script.Parent
+	local add = 10
+	wait(1)
+	local k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(k/255,0/255,0/255)
+		k = k + add
+		wait()
+	end
+	while true do
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255,k/255,0/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(0/255,255/255,k/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(k/255,0/255,255/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+			k = k + add
+			wait()
+		end
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+			k = k + add
+			wait()
+		end
+	end
+end
+coroutine.wrap(DLJZQMQ_fake_script)()
+local function PLHFZO_fake_script() -- MadeByArchiston.Script 
+	local script = Instance.new('Script', MadeByArchiston)
+
+	local text = script.Parent
+	local add = 10
+	wait(1)
+	local k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(k/255,0/255,0/255)
+		k = k + add
+		wait()
+	end
+	while true do
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255,k/255,0/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(0/255,255/255,k/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(k/255,0/255,255/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+			k = k + add
+			wait()
+		end
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+			k = k + add
+			wait()
+		end
+	end
+end
+coroutine.wrap(PLHFZO_fake_script)()
