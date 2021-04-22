@@ -17,6 +17,8 @@ main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 main.Position = UDim2.new(0, 0, 0.541832685, 0)
 main.Size = UDim2.new(0, 394, 0, 230)
+main.Active = true
+main.Draggable = true
 
 KnifeSimulatorGUI.Name = "Knife Simulator GUI"
 KnifeSimulatorGUI.Parent = main
