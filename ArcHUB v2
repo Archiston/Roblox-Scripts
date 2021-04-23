@@ -1,0 +1,70 @@
+-- Made By Archiston
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local ArcGUIv2 = Instance.new("TextLabel")
+local MadeBy = Instance.new("TextLabel")
+local mm2 = Instance.new("TextButton")
+local arsenal = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.388003737, 0, 0.141434267, 0)
+main.Size = UDim2.new(0, 478, 0, 265)
+main.Active = true
+main.Draggable = true
+
+ArcGUIv2.Name = "ArcGUI v2"
+ArcGUIv2.Parent = main
+ArcGUIv2.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+ArcGUIv2.BorderSizePixel = 0
+ArcGUIv2.Size = UDim2.new(0, 478, 0, 25)
+ArcGUIv2.Font = Enum.Font.Cartoon
+ArcGUIv2.Text = "ArcGUI v2"
+ArcGUIv2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ArcGUIv2.TextSize = 25.000
+
+MadeBy.Name = "Made By"
+MadeBy.Parent = main
+MadeBy.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+MadeBy.BorderSizePixel = 0
+MadeBy.Position = UDim2.new(0, 0, 0.905660391, 0)
+MadeBy.Size = UDim2.new(0, 478, 0, 25)
+MadeBy.Font = Enum.Font.Cartoon
+MadeBy.Text = "Made By ArchistonWasTaken#0811"
+MadeBy.TextColor3 = Color3.fromRGB(0, 0, 0)
+MadeBy.TextSize = 25.000
+
+mm2.Name = "mm2 "
+mm2.Parent = main
+mm2.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+mm2.BorderSizePixel = 0
+mm2.Position = UDim2.new(0.508368194, 0, 0.094339624, 0)
+mm2.Size = UDim2.new(0, 235, 0, 215)
+mm2.Font = Enum.Font.Cartoon
+mm2.Text = "Murder Mystery 2"
+mm2.TextColor3 = Color3.fromRGB(0, 0, 0)
+mm2.TextSize = 30.000
+mm2.MouseButton1Down:connect(function()
+	loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+end)
+
+arsenal.Name = "arsenal"
+arsenal.Parent = main
+arsenal.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+arsenal.BorderSizePixel = 0
+arsenal.Position = UDim2.new(0, 0, 0.094339624, 0)
+arsenal.Size = UDim2.new(0, 243, 0, 215)
+arsenal.Font = Enum.Font.Cartoon
+arsenal.Text = "Arsenal"
+arsenal.TextColor3 = Color3.fromRGB(0, 0, 0)
+arsenal.TextSize = 35.000
+arsenal.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/NougatBitz/DuckHub/master/Main.lua'))()
+end)
