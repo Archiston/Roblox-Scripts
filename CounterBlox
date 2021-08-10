@@ -1,0 +1,24 @@
+local Distance = 100 -- distance
+local Interval = 0 -- how many seconds to wait
+local TeamCheck = true -- team check
+
+local function GetPlayersWithData(Teams, Distance)
+    local Team = Teams == true and 'TeamCheck' or false
+    for i,v in next, game.Players:GetPlayers() do
+        if (Team == 'TeamCheck' and v.Team ~= game.Players.LocalPlayer.Team or (not Team and true)) and v.Character and v.Character:FindFirstChild('HumanoidRootPart') and v.Character:FindFirstChild('Humanoid') and v.Character.Humanoid.Health ~= 0 and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart') then
+            local Magnitude =  (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.Character.HumanoidRootPart.Position).magnitude
+            if Magnitude <= Distance then
+                return v.Character.Head
+            end
+        end
+    end
+    return false
+end
+
+while wait(Interval) do
+    local CorrectPart = GetPlayersWithData(TeamCheck, Distance)
+
+    if CorrectPart ~= false and game.Players.LocalPlayer.Character:FindFirstChild('Gun')  then
+        game:GetService("ReplicatedStorage").Events.HitPart:FireServer(CorrectPart, CorrectPart.Position, 'AK47', 8192, game.Players.LocalPlayer.Character:FindFirstChild('Gun'), nil, nil, 1, false, false, Vector3.new(0,0,0), 6761, Vector3.new(0,0,0))
+    end
+end
